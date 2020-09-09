@@ -1,4 +1,4 @@
-import '../_mockLocation';
+// import '../_mockLocation';
 import React, { useContext, useCallback } from 'react';
 import { View, StyleSheet} from 'react-native';
 import { SafeAreaView, withNavigationFocus } from 'react-navigation'
