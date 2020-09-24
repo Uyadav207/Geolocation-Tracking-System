@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, KeyboardAvoidingView, Dimensions } from 'react-native';
 import { NavigationEvents } from 'react-navigation'
 import AuthForm from '../components/AuthForm'
 import NavLink from '../components/NavLink'
@@ -10,12 +10,14 @@ const SigninScreen = () => {
   const { state, signin, clearErrorMessage } = useContext(Context)
 
   return (
-    <View style={styles.container}>   
+    <KeyboardAvoidingView
+      style={styles.container}
+    >  
     <NavigationEvents 
       onWillFocus={clearErrorMessage}
     />
     <AuthForm
-        headerText = "Sign In to Your FitKit Account"
+        headerText = "TRACKON LOGIN"
         errorMessage = {state.errorMessage}
         submitButtonText = "Sign In"
         onSubmit = {signin}
@@ -24,8 +26,7 @@ const SigninScreen = () => {
       text = "Don't have an account? Sign up instead"
       routeName = "Signup"
     />
-    </View>
-  
+    </KeyboardAvoidingView>
     )
   }
   
@@ -37,7 +38,7 @@ const SigninScreen = () => {
   
   const styles = StyleSheet.create({
     container: {
-      flex:1,
+      height: Dimensions.get('screen').height-100,
       justifyContent: 'center',
       marginBottom: 100
     }

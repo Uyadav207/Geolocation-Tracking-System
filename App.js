@@ -14,8 +14,9 @@ import ResolveAuthScreen from './src/screens/ResolveAuthScreen'
 import { Provider } from './src/context/LocationContext';
 import { Provider as LocationProvider } from './src/context/LocationContext'
 import { Provider as TrackProvider } from './src/context/TrackContext'
-import { TabBarIOS } from 'react-native';
+import { ActivityIndicator, TabBarIOS } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 
 const trackListFlow = createStackNavigator({
@@ -25,7 +26,10 @@ const trackListFlow = createStackNavigator({
 
 trackListFlow.navigationOptions = {
   title: "Tracks",
-  tabBarIcon : <MaterialIcons name="track-changes" size={24} color="black" />
+  tabBarIcon : <MaterialIcons name="track-changes" size={24} color="#e84a5f" />,
+  tabBarOptions: {
+    activeTintColor: '#e84a5f',
+},
 }
 
 const switchNavigator = createSwitchNavigator({
@@ -45,13 +49,16 @@ const switchNavigator = createSwitchNavigator({
 const App = createAppContainer(switchNavigator);
 
 export default () => {
+
   return (
+    <SafeAreaProvider>
     <TrackProvider>
     <LocationProvider>
     <AuthProvider>
-      <App ref={(Navigator) => {setNavigator(Navigator)}}/>
+      <App theme="light" ref={(Navigator) => {setNavigator(Navigator)}}/>
     </AuthProvider>
     </LocationProvider>
     </TrackProvider>
+    </SafeAreaProvider>
   )
 }

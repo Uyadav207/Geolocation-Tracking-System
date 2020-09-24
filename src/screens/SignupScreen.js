@@ -4,12 +4,11 @@ import { Context as AuthContext } from '../context/AuthContext';
 import AuthForm from '../components/AuthForm'
 import NavLink from '../components/NavLink'
 import { NavigationEvents } from 'react-navigation'
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const SignupScreen = ({navigation}) => {
   
   const { state, signup, clearErrorMessage } = useContext(AuthContext);
-
-
 
   return (
   <View style={styles.container}>   
@@ -17,7 +16,7 @@ const SignupScreen = ({navigation}) => {
     onWillFocus={clearErrorMessage}
   />
   <AuthForm
-      headerText = "Create FitKit Account"
+      headerText = "TRACKON SIGNUP"
       errorMessage = {state.errorMessage}
       submitButtonText = "Sign up"
       onSubmit = {signup}

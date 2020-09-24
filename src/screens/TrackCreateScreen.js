@@ -1,7 +1,6 @@
-// import '../_mockLocation';
 import React, { useContext, useCallback } from 'react';
-import { View, StyleSheet} from 'react-native';
-import { SafeAreaView, withNavigationFocus } from 'react-navigation'
+import {  StyleSheet, KeyboardAvoidingView} from 'react-native';
+import {  withNavigationFocus } from 'react-navigation'
 import Map from '../components/Map'
 import { Text } from 'react-native-elements'
 import { Context as LocationContext } from '../context/LocationContext'
@@ -20,22 +19,24 @@ const callback = useCallback(
 )
 const [ err ] = useLocation(isFocused || recording, callback)
 
+console.log(recording);
 
   return (
-    <SafeAreaView forceInset={{top: 'always'}} >
-      <View style={styles.header}>
-        <Text style={styles.heading} h2>CREATE TRACKS</Text>
-      </View>
+       <KeyboardAvoidingView
+              behavior={'position'}>
       <Map />
       { err ? <Text>Please Enable Location Services</Text> : null }
     <TrackForm />
-    </SafeAreaView>
-  )
+    </KeyboardAvoidingView>
+    )
 }
 
 TrackCreateScreen.navigationOptions = {
   title: 'Add Track',
-  tabBarIcon: <MaterialIcons name="directions-bike" size={24} color="black" />
+  tabBarIcon: <MaterialIcons name="directions-bike" size={24} color="#e84a5f" />,
+  tabBarOptions: {
+    activeTintColor: '#e84a5f',
+},
 }
 
 const styles = StyleSheet.create(
