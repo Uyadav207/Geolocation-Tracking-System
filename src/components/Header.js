@@ -5,7 +5,7 @@ import { Entypo } from '@expo/vector-icons';
 const Header = () => {
     return (
         <View style={styles.Header} >
-            <Entypo style={{ marginLeft: 10 }} name="location" size={30} color="black" />
+            <Entypo style={{ marginLeft: 10 }} name="location" size={30} color="#e84a5f" />
             <Text style={styles.textStyle}>Trackon</Text>
         </View>
     )
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         shadowOffset: {
             width: 0,
-            height: 9,
+            height: 1,
         },
         shadowOpacity: 0.1,
         shadowRadius: 3,
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
         padding: 10,
         paddingTop: 20,
         borderBottomWidth: 1,
-        borderBottomColor: '#ddd'
+        borderBottomColor: '#eee'
     },
     textStyle: {
         marginLeft: 20,

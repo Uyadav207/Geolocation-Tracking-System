@@ -17,14 +17,14 @@ return (
     <Input value={name} onChangeText={changeName} placeholder="Enter name" />
     </Spacer>
         <Spacer>
-        {recording ? <Button title="Stop Recording" onPress={stopRecording} /> :
-                     <Button title="Start Recording" onPress={startRecording} />
+        {recording ? <Button buttonStyle={{ backgroundColor: '#e84a5f'}} title="Stop Recording" onPress={stopRecording} /> :
+                     <Button buttonStyle={{ backgroundColor: '#e84a5f'}} title="Start Recording" onPress={startRecording} />
         }
         </Spacer>
          <Spacer>
         {
           !recording && locations.length
-          ? (  <Button title="Save Recording" onPress={saveTrack} />
+          ? (  <Button buttonStyle={{ backgroundColor: '#e84a5f'}} title="Save Recording" onPress={saveTrack} />
         ) : null
         }
         </Spacer>

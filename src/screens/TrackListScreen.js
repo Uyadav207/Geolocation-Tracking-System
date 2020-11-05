@@ -12,9 +12,12 @@ import { FontAwesome5 } from '@expo/vector-icons';
 
 const TrackListScreen = ({navigation}) => {
   const { state, fetchTrack } = useContext(TrackContext);
+  const { name } = state;
   return (
     <SafeAreaView style={{ flex: 1 }}>
-    <Header />
+    <Header 
+      
+    />
     <ScrollView style={{ flex: 1, backgroundColor: 'white' }} showsVerticalScrollIndicator={false} >
     <NavigationEvents onWillFocus={fetchTrack} />
       <Text style={styles.TopView}>Track your daily   <FontAwesome5 name="running" size={24} color="black" />   with Trackon.     An app that makes your day productive.</Text>
@@ -23,12 +26,8 @@ const TrackListScreen = ({navigation}) => {
        <Upper imageUri="https://kit8.net/images/thumbnails/580/386/detailed/4/maps@2x.png" content="Keep track of your geolocations. find yourself in any place, in the world. keeps track of your daily walks." />
        <Upper imageUri="https://www.adventurealan.com/wp-content/uploads/2015/11/conness-gps-1030x687.jpg" content="Going for hiking with friends, lost your path. Trackon can help you finding way back home." />
        </ScrollView>
-            
-       { 
-       
-       
-       (!fetchTrack)?
-       <View>
+  
+      
         
        <Text style={{ fontWeight:"700" , textAlign:"center", fontSize: 18, marginBottom: 20}} >Your Track Records</Text>
         <FlatList  
@@ -42,13 +41,7 @@ const TrackListScreen = ({navigation}) => {
             </TouchableOpacity>
           }}
         />
-        </View>
-  
-        :
-  
-        <Button title="Create New Track" onPress={() => navigation.navigate('TrackCreate')} />
-  
-  }
+
   
   
   </ScrollView>
