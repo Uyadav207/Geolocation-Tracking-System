@@ -1,4 +1,7 @@
-![Whatsapp-clone](https://raw.githubusercontent.com/Uyadav207/whatsapp-clone/master/src/Assets/whatsapp-ss.png)
+<p Align="center">
+  <img src="https://github.com/Uyadav207/Trackon-Tracker-Application/blob/master/screen1.jpeg?raw=true" alt="screenshot1" height="500" width="250" />
+  <img src="https://github.com/Uyadav207/Trackon-Tracker-Application/blob/master/screen2.jpeg?raw=true" alt="screen shot 2"  height="500" width="250" />
+</p>
 
 # Trackon React Native [ GEO-LOCATION PATH TRACKER ]
 
