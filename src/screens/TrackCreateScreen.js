@@ -33,7 +33,7 @@ console.log(recording);
 
 TrackCreateScreen.navigationOptions = {
   title: 'Add Track',
-  tabBarIcon: <MaterialIcons name="directions-bike" size={24} color="#e84a5f" />,
+  tabBarIcon: <MaterialIcons name="directions-bike" size={24} color="#fff" />,
   tabBarOptions: {
     activeTintColor: '#e84a5f',
 },

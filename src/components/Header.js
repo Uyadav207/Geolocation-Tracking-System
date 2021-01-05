@@ -14,7 +14,7 @@ const Header = () => {
 const styles = StyleSheet.create({
     Header: {
         height: 60,
-        backgroundColor: '#fff',
+        backgroundColor: '#eee',
         flexDirection: 'row',
         shadowOffset: {
             width: 0,

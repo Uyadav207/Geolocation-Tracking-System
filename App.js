@@ -26,7 +26,7 @@ const trackListFlow = createStackNavigator({
 
 trackListFlow.navigationOptions = {
   title: "Tracks",
-  tabBarIcon : <MaterialIcons name="track-changes" size={24} color="#e84a5f" />,
+  tabBarIcon : <MaterialIcons name="track-changes" size={24} color="#fff" />,
   tabBarOptions: {
     activeTintColor: '#e84a5f',
 },
@@ -55,7 +55,7 @@ export default () => {
     <TrackProvider>
     <LocationProvider>
     <AuthProvider>
-      <App theme="light" ref={(Navigator) => {setNavigator(Navigator)}}/>
+      <App theme="dark" ref={(Navigator) => {setNavigator(Navigator)}}/>
     </AuthProvider>
     </LocationProvider>
     </TrackProvider>

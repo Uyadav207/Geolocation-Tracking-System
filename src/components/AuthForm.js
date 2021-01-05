@@ -3,14 +3,16 @@ import { StyleSheet } from 'react-native';
 import { Text, Button, Input } from 'react-native-elements'; 
 import Spacer from './Spacer'
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { color } from 'react-native-reanimated';
+import { StatusBar } from 'expo-status-bar';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const AuthForm = ({ headerText, errorMessage, onSubmit, submitButtonText }) => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
    
  return (
-     <>     
+     <SafeAreaView style={{ flex: 1, justifyContent: 'center' }}>     
+     <StatusBar style="auto" />
     <Spacer>
     <Text style={styles.headerText} h3>{headerText}</Text>
     </Spacer>
@@ -52,9 +54,9 @@ const AuthForm = ({ headerText, errorMessage, onSubmit, submitButtonText }) => {
     </Spacer>
   {errorMessage ? <Text style={styles.errorMessage}>{errorMessage}</Text> : null }
     <Spacer>
-    <Button style={styles.button}  title={submitButtonText} onPress={()=> onSubmit({ email, password })} />
+    <Button buttonStyle={{ backgroundColor: '#e84a5f'}} title={submitButtonText} onPress={()=> onSubmit({ email, password })} />
     </Spacer>
-    </>
+    </SafeAreaView>
     )
 }
 
@@ -70,10 +72,6 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         fontWeight: "bold"
       },
-      button: {
-        backgroundColor: "#000",
-        
-      }
 })
 
 export default AuthForm;
