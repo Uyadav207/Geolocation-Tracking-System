@@ -9,7 +9,7 @@ The idea is to create an application that keeps track of it’s user’s daily w
 Whenever the user want to have a track of their locations and want to measure distance , speed or directions. We provide them with accurate results. To achieve the objective, this Application is build using Facebook’s mobile application development technology React Native that helps in developing Android as well as IOS applications using same codebase. The application will use mongoDB as Nosql database to keep the track of user’s authentication as well as real-time geolocations by tracking user’s Coordinates, latitude and longitude.
 To keep the track of locations and accessing it from database, express server is implemented with the help of frameworks like Express.js and Node.js on backend of this application. To access and penetrating through different data-layers inside the application Redux and Context Api is also used. Proper user Interface along with user authentication is used to provide the best User Experience.
 
-# Built using Stack
+# Modules Used in the Projects
 
 - React-Native
 - Firebase
@@ -19,7 +19,7 @@ To keep the track of locations and accessing it from database, express server is
 
 # Deployement 
 
-The project is Not been converted into Apk format to contribute, please fork the repository.
+The Signed Apk is generated, Will later be uploaded to Playstore.
 
 # How to contribute
 
